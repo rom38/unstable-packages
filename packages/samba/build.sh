@@ -77,6 +77,7 @@ EOF
 
 	USING_SYSTEM_ASN1_COMPILE=1 ASN1_COMPILE=/usr/bin/asn1_compile \
 	USING_SYSTEM_COMPILE_ET=1 COMPILE_ET=/usr/bin/compile_et \
+	CFLAGS="-D__ANDROID_API__=24 -D__USE_FILE_OFFSET64=1" \
 	./buildtools/bin/waf configure \
 		--jobs="$TERMUX_MAKE_PROCESSES" \
 		--bundled-libraries='!asn1_compile,!compile_et' \
